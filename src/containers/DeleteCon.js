@@ -34,7 +34,6 @@ function DeleteCon() {
     } else {
       dispatch({ type: "FINISHED" });
       alert("회원 탈퇴에 실패했습니다.");
-      navigate("/member/list");
     }
   }, [id, navigate, logout]);
 
