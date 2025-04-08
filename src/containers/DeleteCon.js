@@ -18,7 +18,7 @@ function DeleteCon() {
 
     const confirmDelete = window.confirm("정말 회원 탈퇴하시겠습니까?");
     if (!confirmDelete) {
-      navigate(-1); // 이전 페이지로 돌아가기
+      navigate(-1);
       return;
     }
   
@@ -29,8 +29,8 @@ function DeleteCon() {
     if (result === 1) {
       dispatch({ type: "FINISHED" });
       alert("회원 탈퇴가 성공적으로 완료되었습니다.");
-      logout(); // 선택사항
-      navigate("/member/login");
+      logout();
+      navigate("/");
     } else {
       dispatch({ type: "FINISHED" });
       alert("회원 탈퇴에 실패했습니다.");
