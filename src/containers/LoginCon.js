@@ -38,13 +38,16 @@ function LoginCon(){
         dispatch({type:"LOADING"})
         const result = loginCheck(state.login.id, state.login.pwd);
         dispatch({type:"FINISHED"})
-        if(result ===0){
-            login(state.login.id)
-            navigate("/member/list")
-        }else if(result ===1){
-            alert("아이디가 존재하지 않습니다.")
-            idRef.current.focus()
-    }
+        if (result === 0) {
+            login(state.login.id);
+            navigate("/member/list");
+          } else if (result === -1) {
+            alert("❗ 아이디가 존재하지 않습니다.");
+            idRef.current.focus();
+          } else if (result === 1) {
+            alert("❗ 비밀번호가 틀렸습니다.");
+            pwdRef.current.focus();
+          }
 }
 
     return(
