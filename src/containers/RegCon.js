@@ -71,7 +71,7 @@ function RegCon(){
                 dispatch({type:"FINISHED"})
                 console.log("result : ", result )
                 if(result ===1){
-                    navigate("/")
+                    navigate("/member/login")
                 }else{
                     throw new Error("알수 없는 오류가 발생했습니다.")
                 }
