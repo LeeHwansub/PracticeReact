@@ -30,7 +30,7 @@ function DeleteCon() {
       dispatch({ type: "FINISHED" });
       alert("회원 탈퇴가 성공적으로 완료되었습니다.");
       logout(); // 선택사항
-      navigate("/");
+      navigate("/member/login");
     } else {
       dispatch({ type: "FINISHED" });
       alert("회원 탈퇴에 실패했습니다.");
